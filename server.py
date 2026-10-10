@@ -32,4 +32,5 @@ def solve_challenge() -> str:
 
 if __name__ == "__main__":
     # Run over Streamable HTTP transport mounted at /mcp
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=8000, mount_path="/mcp")
+    mcp.http_app(path="/mcp")
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=8000)
